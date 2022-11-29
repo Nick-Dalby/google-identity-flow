@@ -15,8 +15,7 @@ function App() {
   useEffect(() => {
     /* global google */
     google.accounts.id.initialize({
-      client_id:
-        '73454866144-efi6pjcedu21dq3pog7oplqf9i3a97gd.apps.googleusercontent.com',
+      client_id: import.meta.env.VITE_GOOGLE_CLIENT_ID,
       callback: handleCredentialResponse,
     })
     google.accounts.id.renderButton(document.getElementById('signInDiv'), {
